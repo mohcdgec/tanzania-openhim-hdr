@@ -421,16 +421,16 @@ def calculate_and_save_bed_occupancy_rate(bed_occupancy_id):
                 print(e)
 
 
-def create_bed_occupancy_report_record(discharge_date, admission_date, item, bed_occupancy_rate, facility_hfr_code):
-
-        for x in range(int((discharge_date - admission_date).days)):
-
-            instance_bed_occupancy_report = BedOccupancyReport()
-            instance_bed_occupancy_report.patient_id = item.patient_id
-            instance_bed_occupancy_report.date = item.admission_date + datetime.timedelta(days=x)
-            instance_bed_occupancy_report.admission_date = item.admission_date
-            instance_bed_occupancy_report.ward_id = item.ward_id
-            instance_bed_occupancy_report.ward_name = item.ward_name
-            instance_bed_occupancy_report.bed_occupancy = bed_occupancy_rate
-            instance_bed_occupancy_report.facility_hfr_code = facility_hfr_code
-            instance_bed_occupancy_report.save()
+# def create_bed_occupancy_report_record(discharge_date, admission_date, item, bed_occupancy_rate, facility_hfr_code):
+#
+#         for x in range(int((discharge_date - admission_date).days)):
+#
+#             instance_bed_occupancy_report = BedOccupancyReport()
+#             instance_bed_occupancy_report.patient_id = item.patient_id
+#             instance_bed_occupancy_report.date = item.admission_date + datetime.timedelta(days=x)
+#             instance_bed_occupancy_report.admission_date = item.admission_date
+#             instance_bed_occupancy_report.ward_id = item.ward_id
+#             instance_bed_occupancy_report.ward_name = item.ward_name
+#             instance_bed_occupancy_report.bed_occupancy = bed_occupancy_rate
+#             instance_bed_occupancy_report.facility_hfr_code = facility_hfr_code
+#             instance_bed_occupancy_report.save()

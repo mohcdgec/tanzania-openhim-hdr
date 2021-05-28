@@ -67,7 +67,8 @@ INSTALLED_APPS = [
     'xlwt',
     'crispy_forms',
     'django_tables2',
-    'pandas',
+    'celery',
+
 ]
 
 REST_FRAMEWORK = {

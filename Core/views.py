@@ -22,6 +22,9 @@ def convert_to_csv(request):
         message_type = transaction.message_type
         facility_hfr_code = transaction.facility_hfr_code
 
+        instance_facility = master_data_models.Facility.objects.filter(facility_hfr_code = facility_hfr_code).first()
+        org_name = instance_facility.description
+
         model_fields = TransactionSummaryLine._meta.fields + TransactionSummaryLine._meta.many_to_many
         field_names = [field.name for field in model_fields]
 
@@ -48,6 +51,7 @@ def convert_to_csv(request):
         fields.append("TransactionID")
         fields.append("messageType")
         fields.append("facilityHfrCode")
+        fields.append("orgName")
 
         for key in jsonObject:
             fields.append(key)
@@ -65,6 +69,7 @@ def convert_to_csv(request):
             values.append(transaction_id)
             values.append(message_type)
             values.append(facility_hfr_code)
+            values.append(org_name)
 
             for key in jsonObject:
                 value = jsonObject[key]
