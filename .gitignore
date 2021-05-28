@@ -17,3 +17,4 @@ MasterData/migrations
 UserManagement/migrations
 Core/migrations
 secrets.json
+requirements.txt
