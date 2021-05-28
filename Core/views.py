@@ -5,10 +5,7 @@ from django.http import HttpResponse
 from .forms import PayloadImportForm, CPTCodeMappingImportForm
 from django.shortcuts import render, redirect
 from MasterData import models as master_data_models
-from Core import models as core_models
 from django.core.files.storage import FileSystemStorage
-from API import validators as validators
-from asgiref.sync import sync_to_async
 from UserManagement import tables as user_management_tables
 from django_tables2 import RequestConfig
 

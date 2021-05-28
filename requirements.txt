@@ -1,4 +1,4 @@
-amqp==2.4.2
+amqp==5.0.2
 aniso8601==3.0.2
 asgiref==3.3.1
 asn1crypto==1.4.0
@@ -44,7 +44,7 @@ humanize==0.5.1
 idna==2.6
 isort==4.3.21
 jdcal==1.4
-kombu==4.2.2.post1
+kombu==5.0.2
 lazy-object-proxy==1.6.0
 Markdown @ git+https://github.com/Python-Markdown/markdown.git@a11431539d08e14b0bd821ceb101fa59d6a74c8a
 mccabe==0.6.1
